@@ -1,9 +1,9 @@
 //
-//  Timer.m
-//  scheduleTimer
+//  RNBackgroundTimer.m
+//  
 //
 //  Created by Ronald Suez on 8/6/18.
-//  Copyright © 2018 Facebook. All rights reserved.
+// 
 //
 
 

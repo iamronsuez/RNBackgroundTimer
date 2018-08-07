@@ -1,6 +1,6 @@
 //
-//  RepeatingTimer.swift
-//  scheduleTimer
+//  Timer.swift
+//  
 //
 //  Created by Ronald Suez on 8/6/18.
 //

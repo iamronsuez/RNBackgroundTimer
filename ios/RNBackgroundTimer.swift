@@ -1,9 +1,9 @@
 //
-//  Timer.swift
-//  scheduleTimer
+//  RNBackgroundTimer.swift
+//  
 //
 //  Created by Ronald Suez on 8/6/18.
-//  Copyright © 2018 Facebook. All rights reserved.
+//  
 //
 
 import Foundation

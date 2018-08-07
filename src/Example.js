@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, NativeModules } from 'react-native';
-import RNtimerEventEmitter from './RNTimerEventEmitter'
-import RNtimerView from './RNTimerView'
+import RNTimerView from './RNTimerView'
+
 export default class Example extends React.Component {
   
  state = {
@@ -9,7 +9,7 @@ export default class Example extends React.Component {
  }
   render () {
     return (
-      <RNtimerView>
+      <RNTimerView>
       {({delayedTimer, status}) => (
         <View style={styles.container}>
           {this.state.started && <Text>Timer set for {this.state.time} seconds.</Text>}
@@ -22,7 +22,7 @@ export default class Example extends React.Component {
           <Text>Timer {status}</Text>
         </View>
       )}
-    </RNtimerView>
+    </RNTimerView>
     )
   }
 }
