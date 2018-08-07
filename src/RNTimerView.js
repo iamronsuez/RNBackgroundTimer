@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { NativeModules, StyleSheet } from 'react-native'
 import RNtimerEventEmitter from './RNTimerEventEmitter'
 
-const RNtimer = NativeModules.RNTimer
+const RNtimer = NativeModules.RNBackgroundTimer
 
 export default class RNTimerView extends Component {
 
