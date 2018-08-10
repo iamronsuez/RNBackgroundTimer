@@ -1,9 +1,34 @@
 package com.llv.rn;
 
+
+
+import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
-import com.facebook.react.bridge.Callback;
+import com.facebook.react.bridge.WritableMap;
+import com.facebook.react.modules.core.DeviceEventManagerModule;
+
+import android.annotation.SuppressLint;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.os.Build;
+import android.os.Handler;
+import android.os.Looper;
+import android.util.Log;
+import android.widget.Toast;
+
+import java.util.Calendar;
+import java.util.Date;
+
+import javax.annotation.Nullable;
+
+
+
 
 public class RNBackgroundTimerModule extends ReactContextBaseJavaModule {
 
@@ -28,7 +53,7 @@ public class RNBackgroundTimerModule extends ReactContextBaseJavaModule {
     @Override
     public void run() {
       Log.i("RNTimer", "delayedTimer: finished");
-      TimerModule.emitDeviceEvent("onTimeFinished", null);
+      RNBackgroundTimerModule.emitDeviceEvent("onTimeFinished", null);
       timerStarted = false;
     }
   };
@@ -41,7 +66,7 @@ public class RNBackgroundTimerModule extends ReactContextBaseJavaModule {
       if (!timerStarted) {
         timerStarted = true;
         Log.i("RNTimer", "delayedTimer: starting");
-        TimerModule.emitDeviceEvent("onTimeStarted", null);
+        RNBackgroundTimerModule.emitDeviceEvent("onTimeStarted", null);
         this.handler.postDelayed(runnableCode, Long.valueOf(interval * 1000));
         callback.invoke(null, interval);
 
