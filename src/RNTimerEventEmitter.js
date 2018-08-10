@@ -7,4 +7,4 @@ class RNTimer extends NativeEventEmitter {
     super(nativeModule);
   }
 }
-export default new RNTimer(NativeModules.RNTimer)
+export default new RNTimer(NativeModules.RNBackgroundTimer)
