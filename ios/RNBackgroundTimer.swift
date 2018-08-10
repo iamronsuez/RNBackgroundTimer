@@ -20,7 +20,7 @@ class RNBackgroundTimer: RCTEventEmitter {
     
     
     @objc func delayedTimer(_ interval: Int, callback: RCTResponseSenderBlock) {
-        self.timer = RepeaitingTimer(timeInterval: TimeInterval(interval))
+        self.timer = Timer(timeInterval: TimeInterval(interval))
         self.timer?.eventHandler = {
             if((self.bridge) != nil) {
                 self.sendEvent(withName: "onTimeFinished", body: ["interval": interval])
