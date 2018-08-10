@@ -12,7 +12,7 @@ import com.facebook.react.uimanager.ViewManager;
 import com.facebook.react.bridge.JavaScriptModule;
 public class RNBackgroundTimerPackage implements ReactPackage {
     
-    public TimerModule RNTimerModule;
+    public TimerModule RNBackgroundTimerModule;
 
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
@@ -21,7 +21,7 @@ public class RNBackgroundTimerPackage implements ReactPackage {
       }
       
       return Arrays.<NativeModule> asList(
-        RNTimerModule
+        RNBackgroundTimerModule
       );
     }
 
