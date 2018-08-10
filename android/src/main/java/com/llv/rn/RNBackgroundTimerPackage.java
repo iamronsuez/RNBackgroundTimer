@@ -12,16 +12,16 @@ import com.facebook.react.uimanager.ViewManager;
 import com.facebook.react.bridge.JavaScriptModule;
 public class RNBackgroundTimerPackage implements ReactPackage {
     
-    public TimerModule RNBackgroundTimerModule;
+    public RNBackgroundTimerModule TimerModule;
 
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-      if (RNTimerModule == null) {
-            RNTimerModule = new TimerModule( reactContext );
+      if (TimerModule == null) {
+            TimerModule = new RNBackgroundTimerModule( reactContext );
       }
       
       return Arrays.<NativeModule> asList(
-        RNBackgroundTimerModule
+        TimerModule
       );
     }
 
